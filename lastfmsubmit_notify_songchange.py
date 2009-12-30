@@ -21,11 +21,11 @@ if __name__ == '__main__':
     (options, args) = parser.parse_args()
 
     # call lastfmsubmit
-#    subprocess.call(['/usr/lib/lastfmsubmitd/lastfmsubmit', 
-#                     '--artist', '%s' % options.artist,
-#                     '--title', '%s' % options.title, 
-#                     '--length', '%s' % options.length, 
-#                     '--album', '%s' % options.album])
+    subprocess.call(['/usr/lib/lastfmsubmitd/lastfmsubmit', 
+                     '--artist', '%s' % options.artist,
+                     '--title', '%s' % options.title, 
+                     '--length', '%s' % options.length, 
+                     '--album', '%s' % options.album])
 
     # send notification to libnotify
     if not options.quiet:
