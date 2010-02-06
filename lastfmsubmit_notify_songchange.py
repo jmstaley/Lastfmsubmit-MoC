@@ -7,17 +7,36 @@ from optparse import OptionParser
 if __name__ == '__main__':
 
     # setup parser
-    parser = OptionParser()
+    usage = 'usage: %prog [options]'
+    parser = OptionParser(usage=usage)
 
     # set default to show notification
     parser.set_defaults(quiet=False)
 
-    parser.add_option('-q', action='store_true', dest='quiet')
-    parser.add_option('-n', action='store_true', dest='no_submit')
-    parser.add_option('-a', '--artist', dest='artist')
-    parser.add_option('-t', '--title', dest='title')
-    parser.add_option('-l', '--length', dest='length')
-    parser.add_option('-r', '--album', dest='album')
+    parser.add_option('-q', 
+                      action='store_true', 
+                      dest='quiet',
+                      help='Suppress notifications')
+    parser.add_option('-n', 
+                      action='store_true', 
+                      dest='no_submit',
+                      help='Suppress lastfm submission')
+    parser.add_option('-a', 
+                      '--artist', 
+                      dest='artist',
+                      help='Artist name')
+    parser.add_option('-t', 
+                      '--title', 
+                      dest='title',
+                      help='Track title')
+    parser.add_option('-l', 
+                      '--length', 
+                      dest='length',
+                      help='Track length')
+    parser.add_option('-r', 
+                      '--album', 
+                      dest='album',
+                      help='Track album')
 
     (options, args) = parser.parse_args()
 
