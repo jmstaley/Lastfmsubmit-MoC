@@ -13,6 +13,7 @@ if __name__ == '__main__':
     parser.set_defaults(quiet=False)
 
     parser.add_option('-q', action='store_true', dest='quiet')
+    parser.add_option('-n', action='store_true', dest='no_submit')
     parser.add_option('-a', '--artist', dest='artist')
     parser.add_option('-t', '--title', dest='title')
     parser.add_option('-l', '--length', dest='length')
@@ -20,12 +21,13 @@ if __name__ == '__main__':
 
     (options, args) = parser.parse_args()
 
-    # call lastfmsubmit
-    subprocess.call(['/usr/lib/lastfmsubmitd/lastfmsubmit', 
-                     '--artist', '%s' % options.artist,
-                     '--title', '%s' % options.title, 
-                     '--length', '%s' % options.length, 
-                     '--album', '%s' % options.album])
+    if not options.no_submit:
+        # call lastfmsubmit
+        subprocess.call(['/usr/lib/lastfmsubmitd/lastfmsubmit', 
+                         '--artist', '%s' % options.artist,
+                         '--title', '%s' % options.title, 
+                         '--length', '%s' % options.length, 
+                         '--album', '%s' % options.album])
 
     # send notification to libnotify
     if not options.quiet:
