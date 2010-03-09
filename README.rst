@@ -33,3 +33,8 @@ find the line that starts with OnSongChange. Uncomment this line and change it s
 
 replacing /home/jon/bin/ for the place you have put the file.
 
+There are two extra options that can be added::
+
+ -q – suppresses the notification
+ -n – suppresses the lastfm submit
+
