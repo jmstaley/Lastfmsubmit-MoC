@@ -27,3 +27,9 @@ Now you need to add the command to moc. In you moc config, which should be locat
 
  ~/.moc/config 
  
+find the line that starts with OnSongChange. Uncomment this line and change it so that it reads::
+
+ OnSongChange = "/home/jon/bin/lastfmsubmit_notify_songchange.py -a %a -t %t -l %d -r %r" 
+
+replacing /home/jon/bin/ for the place you have put the file.
+
