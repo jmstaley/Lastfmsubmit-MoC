@@ -37,4 +37,3 @@ There are two extra options that can be added::
 
  -q – suppresses the notification
  -n – suppresses the lastfm submit
-
