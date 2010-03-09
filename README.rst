@@ -17,3 +17,7 @@ Download the script from::
 
  http://cloud.github.com/downloads/jmstaley/Lastfmsubmit-MoC/lastfmsubmit_notify_songchange.py
 
+This will create a Lastfmsubmit-MoC directory, inside this is the script. The script needs to be made executable::
+
+ chmod +x lastfmsubmit_notify_songchange.py. 
+ 
