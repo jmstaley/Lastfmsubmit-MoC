@@ -21,3 +21,9 @@ This will create a Lastfmsubmit-MoC directory, inside this is the script. The sc
 
  chmod +x lastfmsubmit_notify_songchange.py. 
  
+This then needs to be put somewhere that MoC can find it. For example I have a bin folder in my home directory so I place it there /home/jon/bin/.
+
+Now you need to add the command to moc. In you moc config, which should be located in::
+
+ ~/.moc/config 
+ 
